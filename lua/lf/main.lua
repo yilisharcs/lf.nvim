@@ -299,7 +299,7 @@ function Lf:__set_argv()
     local args = {}
     for _, arg in ipairs(fn.argv()) do
         if api.nvim_buf_is_loaded(fn.bufnr(arg)) then
-            table.insert(args, uv.fs_realpath(arg))
+            table.insert(args, uv.fs_realpath(arg) or "")
         end
     end
     self.arglist = args
