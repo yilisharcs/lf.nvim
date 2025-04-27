@@ -11,7 +11,7 @@ local o = vim.o
 ---@param hl string highlight group
 function M.echomsg(msg, hl)
     hl = hl or "Title"
-    api.nvim_echo({{msg, hl}}, true, {})
+    api.nvim_echo({ { msg, hl } }, true, {})
 end
 
 ---Display notification message
@@ -19,7 +19,7 @@ end
 ---@param level number
 ---@param opts table?
 function M.notify(msg, level, opts)
-    opts = vim.tbl_extend("force", opts or {}, {title = "lf.nvim"})
+    opts = vim.tbl_extend("force", opts or {}, { title = "lf.nvim" })
     vim.notify(msg, level, opts)
 end
 

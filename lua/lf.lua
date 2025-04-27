@@ -35,10 +35,10 @@ end
 local function setup_autocmds()
     api.nvim_create_user_command("Lf", function(tbl)
         require("lf").start(tbl.args)
-    end, {nargs = "*", complete = "file"})
+    end, { nargs = "*", complete = "file" })
 
     if Config.data.default_file_manager or vim.g.lf_netrw then
-        local group = api.nvim_create_augroup("Lf_ReplaceNetrw", {clear = true})
+        local group = api.nvim_create_augroup("Lf_ReplaceNetrw", { clear = true })
 
         if vim.g.loaded_netrwPlugin ~= 1 and not Config.data.disable_netrw_warning then
             api.nvim_create_autocmd("FileType", {
@@ -60,7 +60,7 @@ local function setup_autocmds()
             nested = true,
             callback = function(a)
                 if fn.exists("#FileExplorer") then
-                    api.nvim_create_augroup("FileExplorer", {clear = true})
+                    api.nvim_create_augroup("FileExplorer", { clear = true })
                 end
             end,
         })

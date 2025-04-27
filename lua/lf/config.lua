@@ -37,8 +37,8 @@ local default = {
     default_file_manager = false,
     disable_netrw_warning = true,
     highlights = {
-        Normal = {link = "Normal"},
-        FloatBorder = {link = "FloatBorder"},
+        Normal = { link = "Normal" },
+        FloatBorder = { link = "FloatBorder" },
     },
     count = nil,
     env = {
@@ -48,13 +48,13 @@ local default = {
     -- Layout configurations
     layout_mapping = "<A-u>",
     views = {
-        {width = 0.800, height = 0.800},
-        {width = 0.600, height = 0.600},
-        {width = 0.950, height = 0.950},
-        {width = 0.500, height = 0.500, col = 0, row = 0},
-        {width = 0.500, height = 0.500, col = 0, row = 0.5},
-        {width = 0.500, height = 0.500, col = 0.5, row = 0},
-        {width = 0.500, height = 0.500, col = 0.5, row = 0.5},
+        { width = 0.800, height = 0.800 },
+        { width = 0.600, height = 0.600 },
+        { width = 0.950, height = 0.950 },
+        { width = 0.500, height = 0.500, col = 0,   row = 0 },
+        { width = 0.500, height = 0.500, col = 0,   row = 0.5 },
+        { width = 0.500, height = 0.500, col = 0.5, row = 0 },
+        { width = 0.500, height = 0.500, col = 0.5, row = 0.5 },
     },
 }
 
@@ -63,29 +63,29 @@ local default = {
 ---@return Lf.Config
 local function validate(cfg)
     vim.validate({
-        default_cmd = {cfg.default_cmd, "s", false},
-        default_action = {cfg.default_action, "s", false},
-        default_actions = {cfg.default_actions, "t", false},
-        winblend = {cfg.winblend, {"n", "s"}, false},
-        dir = {cfg.dir, "s", false},
-        direction = {cfg.direction, "s", false},
-        border = {cfg.border, {"s", "t"}, false},
-        height = {cfg.height, {"n", "s"}, false},
-        width = {cfg.width, {"n", "s"}, false},
-        escape_quit = {cfg.escape_quit, "b", false},
-        focus_on_open = {cfg.focus_on_open, "b", false},
-        mappings = {cfg.mappings, "b", false},
-        tmux = {cfg.tmux, "b", false},
-        default_file_manager = {cfg.default_file_manager, "b", false},
-        disable_netrw_warning = {cfg.disable_netrw_warning, "b", false},
-        highlights = {cfg.highlights, "t", false},
-        count = {cfg.count, "n", true},
-        env = {cfg.env, "t", false},
-        env_vars = {cfg.env.vars, "t", false},
-        env_clear = {cfg.env.clear, "b", false},
+        default_cmd = { cfg.default_cmd, "s", false },
+        default_action = { cfg.default_action, "s", false },
+        default_actions = { cfg.default_actions, "t", false },
+        winblend = { cfg.winblend, { "n", "s" }, false },
+        dir = { cfg.dir, "s", false },
+        direction = { cfg.direction, "s", false },
+        border = { cfg.border, { "s", "t" }, false },
+        height = { cfg.height, { "n", "s" }, false },
+        width = { cfg.width, { "n", "s" }, false },
+        escape_quit = { cfg.escape_quit, "b", false },
+        focus_on_open = { cfg.focus_on_open, "b", false },
+        mappings = { cfg.mappings, "b", false },
+        tmux = { cfg.tmux, "b", false },
+        default_file_manager = { cfg.default_file_manager, "b", false },
+        disable_netrw_warning = { cfg.disable_netrw_warning, "b", false },
+        highlights = { cfg.highlights, "t", false },
+        count = { cfg.count, "n", true },
+        env = { cfg.env, "t", false },
+        env_vars = { cfg.env.vars, "t", false },
+        env_clear = { cfg.env.clear, "b", false },
         -- Layout configurations
-        layout_mapping = {cfg.layout_mapping, "s", false},
-        views = {cfg.views, "t", false},
+        layout_mapping = { cfg.layout_mapping, "s", false },
+        views = { cfg.views, "t", false },
     })
 
     cfg.winblend = tonumber(cfg.winblend) --[[@as number]]
