@@ -20,7 +20,6 @@ local default = {
         ["<C-t>"] = "tabedit",
         ["<C-s>"] = "split",
         ["<C-v>"] = "vsplit",
-        ["<C-o>"] = "tab drop",
         ["<C-g>"] = "argedit",
     },
     winblend = 10,
