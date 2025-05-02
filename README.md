@@ -171,7 +171,8 @@ The `autocmd` `LfTermEnter` is fired when the terminal buffer first opens
 
 ### TODO
 - [ ] Set custom filetype
+- [ ] Create Lualine extension with aforementioned filetype
 - [ ] `:LfToggle` command
 - [ ] Save previous size when terminal is closed, so it is restored on open
-- [ ] Set Lualine to `Lf` title
+- [x] Set Lualine to `Lf` title (uses new lf extension)
 - [ ] Fix weird wrapping error that occurs every so often when moving down a list of files
